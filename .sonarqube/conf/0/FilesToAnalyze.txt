@@ -1,0 +1,4 @@
+﻿C:\Users\furka\source\repos\MyFinalProject\Core\DataAccess\EntityFramework\EfEntityRepositoryBase.cs
+C:\Users\furka\source\repos\MyFinalProject\Core\DataAccess\IEntityRepository.cs
+C:\Users\furka\source\repos\MyFinalProject\Core\Entities\IDto.cs
+C:\Users\furka\source\repos\MyFinalProject\Core\Entities\IEntity.cs

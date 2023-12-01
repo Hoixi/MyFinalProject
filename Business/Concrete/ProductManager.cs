@@ -24,9 +24,11 @@ namespace HoixiBackend.Business.Concrete
             _productDal.Add(product);
         }
 
-        public List<Product> GetAll()
+        public List<Product> GetAllService()
         {
+
             return _productDal.GetAll();
+
         }
 
         public List<Product> GetAllByCategory(int id)

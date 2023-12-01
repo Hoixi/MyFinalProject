@@ -10,10 +10,11 @@ namespace HoixiBackend.Business.Abstract
 {
     public interface IProductService
     {
-        List<Product> GetAll();
+        List<Product> GetAllService();
         List<Product> GetAllByCategory(int id);
         List<Product> GetByUnitPrice(decimal min,decimal max);
         List<ProductDetailDto> GetProductDetail();
-        void Add(Product product);        
+        void Add(Product product);
+        
     }
 }
