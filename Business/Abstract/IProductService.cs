@@ -1,4 +1,5 @@
-﻿using HoixiBackend.Entities.Concrete;
+﻿using Core.Utilities.Results;
+using HoixiBackend.Entities.Concrete;
 using HoixiBackend.Entities.DTOs;
 using System;
 using System.Collections.Generic;
@@ -10,11 +11,12 @@ namespace HoixiBackend.Business.Abstract
 {
     public interface IProductService
     {
-        List<Product> GetAllService();
-        List<Product> GetAllByCategory(int id);
-        List<Product> GetByUnitPrice(decimal min,decimal max);
-        List<ProductDetailDto> GetProductDetail();
-        void Add(Product product);
+        IDataResult<List<Product>> GetAll();
+        IDataResult<List<Product>> GetAllByCategory(int id);
+        IDataResult<List<Product>> GetByUnitPrice(decimal min,decimal max);
+        IDataResult<List<ProductDetailDto>> GetProductDetail();
+        IDataResult<Product> GetById(int productId);
+        IResult Add(Product product);
         
     }
 }

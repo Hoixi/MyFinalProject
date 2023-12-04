@@ -12,7 +12,7 @@ namespace HoixiBackend.DataAccess.Concrete.EntityFramework
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server =(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=true");
+            optionsBuilder.UseSqlServer(@"Server=HOIXI-PC;Database=HoixiBackend;Trusted_Connection=true;TrustServerCertificate=True");
         }
 
         public DbSet<Product> Products { get; set; }

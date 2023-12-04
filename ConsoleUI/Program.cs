@@ -4,16 +4,27 @@ using System.Runtime.InteropServices;
 
 
 ProductTest();
-CategoryTest();
+//CategoryTest();
 
 static void ProductTest()
 {
     ProductManager productManager = new ProductManager(new EfProductDal());
 
-    foreach (var product in productManager.GetProductDetail())
+    var result = productManager.GetProductDetail();
+
+    if (result.Success == true)
     {
-        Console.WriteLine("Ürün İsmi : " + product.ProductName + " | Ürün Kategorisi : " + product.CategoryName);
+        foreach (var product in result.Data)
+        {
+            Console.WriteLine("Ürün İsmi : " + product.ProductName + " | Ürün Kategorisi : " + product.CategoryName);
+        }
     }
+
+    else
+    {
+        Console.WriteLine(result.Message);
+    }
+    
 }
 
 static void CategoryTest()
